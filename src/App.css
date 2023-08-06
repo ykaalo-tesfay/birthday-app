@@ -1,15 +1,15 @@
 .App{
+  width: 40vw;
+  height: 80vh;
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.App h1{
-  margin: 0px;
-}
 
 .map img{
- width: 30px;
+ 
  height: 30px;
  border-radius: 15px;
 }
