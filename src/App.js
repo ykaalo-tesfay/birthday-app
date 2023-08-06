@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Profile from './Profile';
+import data from './Data'
+import React from 'react';
 
 function App() {
+  const [datas,setDatas]= React.useState(data)
+
+  function delet(){
+   setDatas([])
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>{datas.length>0 ? 'birthday today': 'no birthday today'}</h1>
+      <Profile datas={datas}/>
+      <button onClick={delet}>clean all</button>
     </div>
   );
 }
